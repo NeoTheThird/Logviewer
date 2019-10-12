@@ -47,7 +47,7 @@ Page {
                 linkColor: UbuntuColors.orange
                 horizontalAlignment: Text.AlignHCenter
                 wrapMode: Text.WrapAtWordBoundaryOrAnywhere
-                text: i18n.tr("Version: ") + "2.2"
+                text: i18n.tr("Version: " +mainView.appVersion)
             }
 
             Label {

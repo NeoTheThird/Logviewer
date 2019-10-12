@@ -16,6 +16,8 @@ MainView {
         pStack.push(Qt.resolvedUrl("MainPage.qml"));
     }
 
+    property string appVersion : "2.3"
+
     Settings {
         id: preferences
         property string dir: "/home/phablet/.cache/upstart/"
