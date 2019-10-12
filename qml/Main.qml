@@ -22,7 +22,7 @@ MainView {
         property string filter: "*.log"
         property int interval: 100
         property int dpFontSize: 10
-        property string username: "Ubuntu Touch User"
+        property string username: "Logviewer"
         property int commonMargin: units.gu(2)
     }
 
