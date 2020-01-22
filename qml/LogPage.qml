@@ -15,6 +15,7 @@ Page {
     property var __popover: null
     property bool dialogError: false
     property string dialogText
+    property bool isLogging: true
 
     header: PageHeader {
         title: logname
@@ -29,11 +30,11 @@ Page {
         Action {
             id: pauseaction
             text: updateTimer.running ? i18n.tr("Pause") : i18n.tr("Start")
+            iconName: "media-playback-pause"
             onTriggered: {
+                isLogging ? viewing() : logging ();
                 console.log(pauseaction.text);
-                updateTimer.running = !updateTimer.running;
             }
-            iconName: updateTimer.running ? "media-playback-pause" : "media-playback-start"
         },
         Action {
             text: doselection ? i18n.tr("Copy") : i18n.tr("Select")
@@ -141,13 +142,15 @@ Page {
                 }
             };
             xhr.send();
+            scrollView.flickableItem.contentY = scrollView.flickableItem.contentHeight - scrollView.height
         }
     }
 
     ScrollView {
         id: scrollView
         anchors {
-            top: logPage.header.bottom
+            top: navigationArea.bottom
+            topMargin: units.gu(1)
             left: parent.left
             right: parent.right
             bottom: parent.bottom
@@ -170,5 +173,120 @@ Page {
             selectionColor: theme.palette.selected.selection
             Component.onCompleted: updateTimer.start();
         }
+
+        flickableItem.onMovementStarted: {
+            viewing();
+            console.log(pauseaction.text);
+        }
+    }
+
+    Rectangle {
+        id: navigationArea
+        width: parent.width
+        height: 0
+        color: theme.palette.normal.base
+        anchors.top: header.bottom
+        visible: false
+
+        Row {
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.horizontalCenter: parent.horizontalCenter
+            spacing: units.gu(2)
+
+            Icon {
+                id: topButton
+                width: units.gu(3)
+                height: width
+                name: "media-skip-backward"
+                rotation: 90
+                color: theme.palette.normal.baseText
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: scrollView.flickableItem.contentY = 0
+                }
+            }
+
+            Icon {
+                id: pageUpButton
+                width: units.gu(2.5)
+                height: width
+                anchors.bottom: topButton.bottom
+                anchors.bottomMargin: units.gu(0.1)
+                name: "media-playback-start-rtl"
+                rotation: 90
+                color: theme.palette.normal.baseText
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: {
+                        scrollView.flickableItem.contentY = scrollView.flickableItem.contentY - scrollView.height*0.95;
+                        scrollView.flickableItem.returnToBounds();
+                        //alternative implementation without the flicker of returnToBounds
+                        //doesn't give a visual feedback that the top has been reached though
+                        // if ((scrollView.flickableItem.contentY - scrollView.height*0.95) > 0) {
+                        //     scrollView.flickableItem.contentY = scrollView.flickableItem.contentY - scrollView.height*0.95;
+                        // } else {
+                        //     scrollView.flickableItem.contentY = 0;
+                        // }
+                    }
+                }
+            }
+
+            Label { id: spacer; text: "-"; color: theme.palette.normal.base}
+
+            Icon {
+                id: pageDownButton
+                width: units.gu(2.5)
+                height: width
+                anchors.top: bottomButton.top
+                anchors.topMargin: units.gu(0.1)
+                name: "media-playback-start"
+                rotation: 90
+                color: theme.palette.normal.baseText
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: {
+                        scrollView.flickableItem.contentY = scrollView.flickableItem.contentY + scrollView.height*0.95;
+                        scrollView.flickableItem.returnToBounds();
+                        //alternative implementation without the flicker of returnToBounds
+                        //doesn't give a visual feedback that the end has been reached though
+                        // if ((scrollView.flickableItem.contentY + scrollView.height*0.95) < (scrollView.flickableItem.contentHeight - scrollView.height)) {
+                        //     scrollView.flickableItem.contentY = scrollView.flickableItem.contentY + scrollView.height*0.95;
+                        // } else {
+                        //     scrollView.flickableItem.contentY = scrollView.flickableItem.contentHeight - scrollView.height
+                        // }
+                    }
+                }
+            }
+
+            Icon {
+                id: bottomButton
+                width: units.gu(3)
+                height: width
+                name: "media-skip-forward"
+                rotation: 90
+                color: theme.palette.normal.baseText
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: scrollView.flickableItem.contentY = scrollView.flickableItem.contentHeight - scrollView.height
+                }
+            }
+        }
+    }
+
+    function logging () {
+        updateTimer.running = true;
+        pauseaction.iconName = "media-playback-pause";
+        navigationArea.visible = false;
+        navigationArea.height = 0;
+        scrollView.flickableItem.contentY = scrollView.flickableItem.contentHeight - scrollView.height;
+        isLogging = true;
+    }
+
+    function viewing () {
+        updateTimer.running = false;
+        pauseaction.iconName = "media-playback-start";
+        navigationArea.height = units.gu(5);
+        navigationArea.visible = true;
+        isLogging = false;
     }
 }
