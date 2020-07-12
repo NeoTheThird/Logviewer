@@ -1,0 +1,177 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the logviewer.neothethird package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: logviewer.neothethird\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-22 15:00+0000\n"
+"PO-Revision-Date: 2020-07-12 20:01+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3.1\n"
+"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: nl\n"
+
+#: ../qml/AboutPage.qml:8 ../qml/MainPage.qml:19
+msgid "About"
+msgstr "Over"
+
+#: ../qml/AboutPage.qml:32 logviewer.neothethird.desktop.in.h:1
+msgid "Logviewer"
+msgstr "Logboeken"
+
+#: ../qml/AboutPage.qml:50
+msgid "Version: "
+msgstr "Versie: "
+
+#: ../qml/AboutPage.qml:58
+msgid ""
+"This application lets you view logs on Ubuntu Touch devices. Based on the "
+"original work of Victor Tuson Palau and Niklas Wenzel."
+msgstr ""
+"Met deze app kun je de logboeken van Ubuntu Touch bekijken. De app is "
+"gebaseerd op de oorspronkelijke code van Victor Tuson Palau en Niklas "
+"Wenzel."
+
+#. TRANSLATORS: Please make sure the URLs are correct
+#: ../qml/AboutPage.qml:67
+msgid ""
+"This program is free software: you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation, either version 3 of the License, or (at your option) "
+"any later version. This program is distributed in the hope that it will be "
+"useful, but WITHOUT ANY WARRANTY; without even the implied warranty of "
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the <a "
+"href='https://www.gnu.org/licenses/gpl-3.0.en.html'>GNU General Public "
+"License</a> for more details."
+msgstr ""
+"This program is free software: you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation, either version 3 of the License, or (at your option) "
+"any later version. This program is distributed in the hope that it will be "
+"useful, but WITHOUT ANY WARRANTY; without even the implied warranty of "
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the <a "
+"href='https://www.gnu.org/licenses/gpl-3.0.en.html'>GNU General Public "
+"License</a> for more details."
+
+#: ../qml/AboutPage.qml:76
+msgid "SOURCE"
+msgstr "BRONCODE"
+
+#: ../qml/AboutPage.qml:76
+msgid "ISSUES"
+msgstr "PROBLEMEN"
+
+#: ../qml/AboutPage.qml:76
+msgid "DONATE"
+msgstr "DONEREN"
+
+#: ../qml/AboutPage.qml:86 ../qml/AboutPage.qml:95
+msgid "Copyright"
+msgstr "Copyright"
+
+#: ../qml/AboutPage.qml:95
+msgid "and"
+msgstr "en"
+
+#: ../qml/MainPage.qml:9
+msgid "Ubuntu Touch Logs"
+msgstr "Ubuntu Touch-logboeken"
+
+#: ../qml/MainPage.qml:14 ../qml/PrefPage.qml:17
+msgid "Settings"
+msgstr "Instellingen"
+
+#: ../qml/MainPage.qml:47
+msgid "No logs found for the set filter"
+msgstr "Er zijn geen logboeken die voldoen aan het filter"
+
+#: ../qml/MainPage.qml:94
+msgid "file"
+msgstr "bestand"
+
+#: ../qml/PrefPage.qml:21
+msgid "Cancel"
+msgstr "Annuleren"
+
+#: ../qml/PrefPage.qml:30
+msgid "Apply"
+msgstr "Toepassen"
+
+#: ../qml/PrefPage.qml:53
+msgid "Directory:"
+msgstr "Map:"
+
+#: ../qml/PrefPage.qml:75
+msgid "Filter:"
+msgstr "Filter:"
+
+#: ../qml/PrefPage.qml:97
+msgid "Refresh interval (ms):"
+msgstr "Ververstussenpoos (in ms):"
+
+#: ../qml/PrefPage.qml:124
+msgid "Font size:"
+msgstr "Lettergrootte:"
+
+#: ../qml/PrefPage.qml:151
+msgid "Pastebin user:"
+msgstr "Pastebin-gebruikersnaam:"
+
+#: ../qml/LogPage.qml:21
+msgid "Log"
+msgstr "Logboek"
+
+#: ../qml/LogPage.qml:37
+msgid "Back"
+msgstr "Vorige"
+
+#: ../qml/LogPage.qml:45
+msgid "Pause"
+msgstr "Onderbreken"
+
+#: ../qml/LogPage.qml:45
+msgid "Start"
+msgstr "Beginnen"
+
+#: ../qml/LogPage.qml:53
+msgid "Copy"
+msgstr "Kopiëren"
+
+#: ../qml/LogPage.qml:53
+msgid "Select"
+msgstr "Kiezen"
+
+#: ../qml/LogPage.qml:64
+msgid "PasteBin"
+msgstr "Pastebin"
+
+#: ../qml/LogPage.qml:109
+msgid "Sending to Pastebin.."
+msgstr "Bezig met opsturen naar Pastebin..."
+
+#: ../qml/LogPage.qml:123
+msgid "Pastebin Error"
+msgstr "Pastebin-fout"
+
+#: ../qml/LogPage.qml:123
+msgid "Pastebin Successful"
+msgstr "Uploaden voltooid"
+
+#: ../qml/LogPage.qml:130
+msgid "Error ocurred uploading to Pastebin"
+msgstr "Het uploaden naar Pastebin is mislukt"
+
+#: ../qml/LogPage.qml:131
+msgid "<br>(Copied to clipboard)"
+msgstr "<br>(gekopieerd naar het klembord)"
+
+#: ../qml/LogPage.qml:137
+msgid "OK"
+msgstr "Oké"
