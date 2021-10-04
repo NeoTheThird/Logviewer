@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: logviewer.neothethird\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-04 20:58+0000\n"
-"PO-Revision-Date: 2021-10-04 23:12+0200\n"
+"POT-Creation-Date: 2021-10-04 21:34+0000\n"
+"PO-Revision-Date: 2021-10-04 23:35+0200\n"
+"Last-Translator: \n"
 "Language-Team: \n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.3\n"
-"Last-Translator: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: de\n"
 
 #: ../qml/SharePage.qml:33
 msgid "Share with"
@@ -39,9 +39,9 @@ msgid ""
 "This application lets you view logs on Ubuntu Touch devices. Based on the "
 "original work of Victor Tuson Palau and Niklas Wenzel."
 msgstr ""
-"Diese App ermöglicht das Betrachten von Logdateien auf Ubuntu Touch "
-"Geräten. Sie basiert auf der originären Arbeit von Victor Tuson Palau und "
-"Niklas Wenzel."
+"Diese App ermöglicht das Betrachten von Logdateien auf Ubuntu Touch Geräten. "
+"Sie basiert auf der originären Arbeit von Victor Tuson Palau und Niklas "
+"Wenzel."
 
 #. TRANSLATORS: Please make sure the URLs are correct
 #: ../qml/AboutPage.qml:67
@@ -56,14 +56,14 @@ msgid ""
 "License</a> for more details."
 msgstr ""
 "Dieses Programm ist freie Software: Du kannst es verteilen und/oder "
-"modifizieren unter den Bedingungen der GNU General Public License so wie "
-"von der Free Software Foundation veröffentlicht, entweder in Version 3 der "
-"Lizenz, oder (nach deiner Wahl) eine der späteren Versionen. Dieses "
-"Programm wird in der Hoffnung vertrieben, dass es nützlich ist, aber OHNE "
-"JEGLICHE GARANTIE, auch ohne die implizierte Garantie der VERKÄUFLICHKEIT "
-"oder GEEIGNETHEIT FÜR IRGENDWELCHE SPEZIFISCHEN ZWECKE. Mehr Details "
-"können der <a href='https://www.gnu.org/licenses/gpl-3.0.en.html'>GNU "
-"General Public License</a> entnommen werden."
+"modifizieren unter den Bedingungen der GNU General Public License so wie von "
+"der Free Software Foundation veröffentlicht, entweder in Version 3 der "
+"Lizenz, oder (nach deiner Wahl) eine der späteren Versionen. Dieses Programm "
+"wird in der Hoffnung vertrieben, dass es nützlich ist, aber OHNE JEGLICHE "
+"GARANTIE, auch ohne die implizierte Garantie der VERKÄUFLICHKEIT oder "
+"GEEIGNETHEIT FÜR IRGENDWELCHE SPEZIFISCHEN ZWECKE. Mehr Details können der "
+"<a href='https://www.gnu.org/licenses/gpl-3.0.en.html'>GNU General Public "
+"License</a> entnommen werden."
 
 #: ../qml/AboutPage.qml:76
 msgid "SOURCE"
@@ -110,36 +110,40 @@ msgid "Select"
 msgstr "Auswählen"
 
 #: ../qml/LogPage.qml:65
+msgid "Copy all"
+msgstr "Kopieren alles"
+
+#: ../qml/LogPage.qml:70
 msgid "PasteBin"
 msgstr "PasteBin"
 
-#: ../qml/LogPage.qml:99
+#: ../qml/LogPage.qml:104
 msgid "Share"
 msgstr "Teilen"
 
-#: ../qml/LogPage.qml:115
+#: ../qml/LogPage.qml:120
 msgid "Sending to Pastebin.."
 msgstr ""
 "Sende an Pasteb\n"
 "in.."
 
-#: ../qml/LogPage.qml:129
+#: ../qml/LogPage.qml:134
 msgid "Pastebin Error"
 msgstr "Pastebin Fehler"
 
-#: ../qml/LogPage.qml:129
+#: ../qml/LogPage.qml:134
 msgid "Pastebin Successful"
 msgstr "Pastebin"
 
-#: ../qml/LogPage.qml:136
+#: ../qml/LogPage.qml:141
 msgid "Error ocurred uploading to Pastebin"
 msgstr "Fehler beim Hochladen zu PasteBin"
 
-#: ../qml/LogPage.qml:137
+#: ../qml/LogPage.qml:142
 msgid "<br>(Copied to clipboard)"
 msgstr "<br>(In Zwischenablage kopiert)"
 
-#: ../qml/LogPage.qml:143
+#: ../qml/LogPage.qml:148
 msgid "OK"
 msgstr "OK"
 

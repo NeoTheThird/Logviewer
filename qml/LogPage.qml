@@ -39,7 +39,7 @@ Page {
             onTriggered: pageStack.pop()
         }
 
-        trailingActionBar.numberOfSlots: 4
+        trailingActionBar.numberOfSlots: 5
         trailingActionBar.actions: [
         Action {
             id: pauseaction
@@ -60,6 +60,11 @@ Page {
                 }
                 doselection = !doselection;
             }
+        },
+        Action {
+            text: i18n.tr("Copy all")
+            iconName: "edit-copy"
+            onTriggered: Clipboard.push(logText.text);
         },
         Action {
             text: i18n.tr("PasteBin")
