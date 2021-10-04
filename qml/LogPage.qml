@@ -39,6 +39,7 @@ Page {
             onTriggered: pageStack.pop()
         }
 
+        trailingActionBar.numberOfSlots: 4
         trailingActionBar.actions: [
         Action {
             id: pauseaction
@@ -93,6 +94,11 @@ Page {
                     PopupUtils.open(resultsD);
                 })
             }
+        },
+        Action {
+            text: i18n.tr("Share")
+            onTriggered: pStack.push(Qt.resolvedUrl("SharePage.qml"), {"url": path})
+            iconName: "share"
         }]
     }
 
